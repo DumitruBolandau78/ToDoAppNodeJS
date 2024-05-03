@@ -5,13 +5,14 @@ const UserSchema = require('../models/user');
 const router = Router();
 
 router.get('/', authMiddleware, async (req, res) => {
-    const user = await UserSchema.findOne({ _id: req.session.user._id});
-    const goals = user.goals;
+    // const user = await UserSchema.findOne({ _id: req.session.user._id});
+    // const goals = user.goals;
+    // console.log(req.session.user);
     res.render('home', {
         title: 'To Do App. Make your goals.',
-        isAuth: req.session.isAuth,
-        userId: req.session.user._id,
-        userItems: goals
+        // isAuth: req.session.isAuth,
+        // userId: req.session.user._id,
+        // userItems: goals
     });
 });
 
@@ -20,6 +21,7 @@ router.post('/', authMiddleware,  async (req, res) => {
         const { goal, userId } = req.body;
 
         const user = await UserSchema.findOne({ _id: req.session.user._id });
+        
         const goals = user.goals;
         goals.push({
             goal: goal,
