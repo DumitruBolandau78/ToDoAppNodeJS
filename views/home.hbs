@@ -1,0 +1,17 @@
+<form action="/" method="POST" class="add-goal">
+    <input type="text" name="goal" required>
+    <input type="hidden" name="userId" value="{{userId}}">
+    <button type="submit">Add Goal</button>
+</form>
+<div class="goals">
+    <h2 class="title">Your goals</h2>
+    {{#if userItems.length}}
+        {{#each userItems}}
+            <form class="goal" action="/goal-delete/{{_id}}" method="POST">
+                <input type="hidden" name="id" value="{{_id}}">
+                <p class="text"><span>{{goal}}</span><span class="date">{{date}}</span></p>
+                <button class="btn-delete"><i class="fa-solid fa-trash"></i></button>
+            </form>
+        {{/each}}
+    {{/if}}
+</div>

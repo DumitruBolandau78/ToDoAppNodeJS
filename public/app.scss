@@ -1,0 +1,161 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.8rem;
+    background-color: #212121;
+
+    .icon {
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+
+    ul {
+        display: flex;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    li{
+        list-style: none;
+        padding: 1rem 1.2rem;
+    }
+}
+
+
+.container {
+    max-width: 1400px;
+    width: 100%;
+    padding: 2rem 2rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-goal {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    input {
+        max-width: 350px;
+        width: 100%;
+        font-size: 1rem;
+        border: none;
+        border-bottom: 2px solid #900;
+        border-radius: 30px;
+        padding: .6rem 1rem;
+        outline: none;
+    }
+
+    #date {
+        max-width: 170px;
+    }
+
+    button {
+        font-weight: bold;
+        padding: .6rem 1rem;
+        font-size: 1rem;
+        background-color: transparent;
+        border: 2px solid #900;
+        border-radius: 5px;
+    }
+}
+
+.signup, .login {
+    padding: 2rem;
+    max-width: 400px;
+    min-height: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: .5rem;
+    border: 2px solid #212121;
+    gap: 1rem;
+    justify-content: center;
+
+    .title {
+        font-size: 1.7rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .error {
+        background-color: #900;
+        text-align: center;
+        color: #fff;
+        padding: .5rem 1rem;
+        border-radius: .3rem;
+    }
+
+    input, button {
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        outline: none;
+        border: none;
+        border-radius: 1rem;
+        border-bottom: 2px solid #212121;
+        background-color: transparent;
+    }
+
+    button {
+        font-weight: bold;
+    }
+
+    a {
+        text-align: center;
+    }
+}
+
+.goals {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    width: 100%;
+
+    .title {
+        text-align: center;
+        margin-top: 5rem;
+    }
+
+    .goal {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .text {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+        }
+
+        .date {
+            display: flex;
+            align-items: center;
+
+            i {
+                margin: 0 2rem;
+            }
+        }
+
+        .btn-delete {
+            cursor: pointer;
+            color: red;
+            background-color: transparent;
+            border: none;
+        }
+    }
+}

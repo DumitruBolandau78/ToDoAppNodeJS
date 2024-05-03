@@ -1,0 +1,142 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.8rem;
+  background-color: #212121;
+}
+.navbar .icon {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.navbar ul {
+  display: flex;
+}
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+}
+.navbar li {
+  list-style: none;
+  padding: 1rem 1.2rem;
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  padding: 2rem 2rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-goal {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.add-goal input {
+  max-width: 350px;
+  width: 100%;
+  font-size: 1rem;
+  border: none;
+  border-bottom: 2px solid #900;
+  border-radius: 30px;
+  padding: 0.6rem 1rem;
+  outline: none;
+}
+.add-goal #date {
+  max-width: 170px;
+}
+.add-goal button {
+  font-weight: bold;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  background-color: transparent;
+  border: 2px solid #900;
+  border-radius: 5px;
+}
+
+.signup, .login {
+  padding: 2rem;
+  max-width: 400px;
+  min-height: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  border: 2px solid #212121;
+  gap: 1rem;
+  justify-content: center;
+}
+.signup .title, .login .title {
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-align: center;
+}
+.signup .error, .login .error {
+  background-color: #900;
+  text-align: center;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+}
+.signup input, .signup button, .login input, .login button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 1rem;
+  border-bottom: 2px solid #212121;
+  background-color: transparent;
+}
+.signup button, .login button {
+  font-weight: bold;
+}
+.signup a, .login a {
+  text-align: center;
+}
+
+.goals {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  width: 100%;
+}
+.goals .title {
+  text-align: center;
+  margin-top: 5rem;
+}
+.goals .goal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.goals .goal .text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+}
+.goals .goal .date {
+  display: flex;
+  align-items: center;
+}
+.goals .goal .date i {
+  margin: 0 2rem;
+}
+.goals .goal .btn-delete {
+  cursor: pointer;
+  color: red;
+  background-color: transparent;
+  border: none;
+}/*# sourceMappingURL=app.css.map */

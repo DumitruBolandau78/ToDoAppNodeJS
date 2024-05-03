@@ -1,0 +1,27 @@
+{{#if isAuth}}
+    BLABAL
+{{else}}
+    {{#if isSignup}}
+        <form class="signup" action="/auth/signup" method="post">
+            <h2 class="title">{{title}}</h2>
+            <p class="error">Email is already used.</p>
+            <input type="email" name="emailSignup" id="emailSignup" placeholder="Your email..." required>
+            <input type="password" name="passwordSignup" id="passwordSignup" placeholder="Your password..." required>
+            <input type="password" name="repeatSignup" id="repeatSignup" placeholder="Repeat your password..." required>
+            <button type="submit">Sign Up</button>
+            <a href="/auth/login">I have already an account</a>
+        </form>
+    {{/if}}
+    
+    {{#if isLogin}}
+        <form class="login" action="/auth/login" method="post">
+            <h2 class="title">{{title}}</h2>
+            <p class="error">Email is already used.</p>
+            <input type="email" name="emailLogin" id="emailLogin" placeholder="Your email..." required>
+            <input type="password" name="passwordLogin" id="passwordLogin" placeholder="Your password..." required>
+            <button type="submit">Log In</button>
+            <a href="/auth/signup">Create an account</a>
+        </form>
+    {{/if}}
+{{/if}}
+
