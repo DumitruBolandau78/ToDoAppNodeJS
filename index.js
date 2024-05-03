@@ -10,8 +10,6 @@ const authRoute = require('./routes/auth');
 
 dotenv.config();
 const PORT = process.env.PORT || 5000;
-const PASSWORD = 'Ygbpnqg4FH8YahgB';
-const MONGODB_URI = `mongodb+srv://dimabolandau0:${PASSWORD}@cluster0.qwj7z8p.mongodb.net/todo`;
 
 const app = express();
 
@@ -26,7 +24,7 @@ const hbs = hbsrs.create({
 
 const store = new MongoToDo({
     collections: 'sessions',
-    uri: MONGODB_URI
+    uri: process.env.MONGODB_URI
 });
 
 app.engine('hbs', hbs.engine);
@@ -48,7 +46,7 @@ app.use('/auth', authRoute);
 
 async function start(){
     try {        
-        await mongoose.connect(MONGODB_URI).then(() => {
+        await mongoose.connect(process.env.MONGODB_URI).then(() => {
             app.listen(PORT, () => {
                 console.log(`Server is running on ${PORT} port.`);
             });
